@@ -10,7 +10,7 @@ https://vcheckzen.github.io/customized/pay/
 # How to use
 1. 下载整个项目并解压
 
-2. 替换以下 3 张图片和 index.html 文件 35 行的支付宝付款码对应的链接
+2. 替换以下 4 张图片和 index.html 文件 35 行的支付宝付款码对应的链接
 
 ```
 static/img/icon/favicon.ico //页面 TAB 上的小图标
