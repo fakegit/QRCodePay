@@ -55,6 +55,12 @@ http://qr.liantu.com/api.php?text=编码后的 URL
 ```
 4. 同样使用上述接口对部署后的 URL 生成二维码
 
+5. 使用以下工具将图片转换为 WEBP 格式，缩小体积
+
+```
+https://www.aconvert.com/cn/image/png-to-webp/
+```
+
 # References
 1. https://github.com/mengkunsoft/OneQRCode
 2. https://segmentfault.com/a/1190000013301132
