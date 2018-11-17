@@ -17,7 +17,7 @@ https://vcheckzen.github.io/customized/pay/
 ```
 static/img/icon/favicon.ico //页面 TAB 上的小图标
 static/img/qrcode/wxpay.png //微信收款码
-static/img/qrcode/qqpay.png //QQ 钱包付款码
+static/img/qrcode/qqpay.png //QQ 钱包收款码
 static/img/qrcode/other.png //该页面部署后 URL 对应的二维码
 Url: "HTTPS://QR.ALIPAY.COM/FKX09613RWE3ROTNTVR362", //支付宝收款码扫描后的链接
 ```
