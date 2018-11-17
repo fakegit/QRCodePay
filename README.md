@@ -5,7 +5,7 @@ ONE qrcode for alipay、wxpay and qqpay, which can be pushed on github pages.
 https://vcheckzen.github.io/customized/pay/
 
 # Why this
-其实类似功能的项目已经有很多，观察后发现他们要么是 php 版本，需要服务器支持，要么界面不太美观，且都依赖接口和外链。所以我参考两个项目，取其中一个的 CSS，另一个的 JS，并去除所有接口和外链，改为部署前手动生成，将页面静态化，无依赖，在此十分感谢两位作者
+其实类似功能的项目已经有很多，观察后发现他们要么是 php 版本，需要服务器支持，要么界面不太美观，且都依赖接口和外链。所以我参考两个项目，取其中一个的样式，另一个的跳转，并去除所有接口和外链，改为部署前手动生成，将页面静态化，无依赖，在此十分感谢两位作者
 
 # How to use
 1. 下载整个项目并解压
