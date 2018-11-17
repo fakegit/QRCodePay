@@ -72,32 +72,37 @@
         }
         document.title = title;
         if(type != "other") payText = setting.payText;
+
         var iconText = document.createElement("h1");
         iconText.innerHTML = title;
+
+        var icon = new Image();
+        icon.onload = function() { imgLoaded("icon", icon, iconText); }
+        icon.src = iconUrl;
+        icon.width = 70;
+        icon.height = icon.width;
+
         var qrcodeText = document.createElement("h3");
         qrcodeText.innerHTML = payText;
-        var icon = new Image();
+
         var qrcode = new Image();
-        icon.onload = function(){
-            document.getElementById("icon").appendChild(icon);
-            document.getElementById("icon").appendChild(iconText);
-            show();
-        };
-        icon.src = iconUrl;
-        icon.width = 80;
-        icon.height = icon.width;
-        qrcode.onload = function(){
-            document.getElementById("qrcode").appendChild(qrcode);
-            document.getElementById("qrcode").appendChild(qrcodeText);
-            show();
-        };
+        qrcode.onload = function() { imgLoaded("qrcode", qrcode, qrcodeText); }
         qrcode.src = qrcodeUrl;
+
         var body = document.body;
         body.setAttribute("class", type);
+
         function show() {
             if(type != "alipay" && icon.complete && qrcode.complete) { 
                 body.removeAttribute("hidden"); 
             }
+        }
+        
+        function imgLoaded(elemmentId, pic, text) {
+            var elem = document.getElementById(elemmentId);
+            elem.appendChild(pic);
+            elem.appendChild(text);
+            show();
         }
     </script>
 </body>
