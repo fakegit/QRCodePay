@@ -12,28 +12,28 @@ https://vcheckzen.github.io/customized/pay/
 # How to use
 1. 下载整个项目并解压
 
-2. 替换以下 4 张图片和 index.html 文件 35 行的支付宝付款码对应的链接
+2. 替换以下 4 张图片和 index.html 文件 35 行的支付宝收款码对应的链接
 
 ```
 static/img/icon/favicon.ico //页面 TAB 上的小图标
-static/img/qrcode/wxpay.png //微信付款码
+static/img/qrcode/wxpay.png //微信收款码
 static/img/qrcode/qqpay.png //QQ 钱包付款码
 static/img/qrcode/other.png //该页面部署后 URL 对应的二维码
-Url: "HTTPS://QR.ALIPAY.COM/FKX09613RWE3ROTNTVR362", //支付宝付款码扫描后的链接
+Url: "HTTPS://QR.ALIPAY.COM/FKX09613RWE3ROTNTVR362", //支付宝收款码扫描后的链接
 ```
 
 3. 部署到 Github Pages 或其他服务器
 
 # Tools
-可以使用以下工具得到项目所需的二维码和支付宝付款码链接
+可以使用以下工具得到项目所需的二维码和支付宝收款码链接
 
-1. 使用二维码扫描器将支付宝、微信和 QQ 付款码全部转成对应 URL
+1. 使用二维码扫描器将支付宝、微信和 QQ 收款码全部转成对应 URL
 
 ```
 https://cli.im/deqr
 ```
 
-2. 使用以下工具将微信和 QQ 付款码对应的 URL 编码
+2. 使用以下工具将微信和 QQ 收款码对应的 URL 编码
 
 ```
 http://tool.oschina.net/encode?type=4
