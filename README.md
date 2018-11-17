@@ -33,7 +33,6 @@ Url: "HTTPS://QR.ALIPAY.COM/FKX09613RWE3ROTNTVR362", //支付宝收款码扫描�
 
 ```
 https://notepad-plus-plus.org/
-
 https://code.visualstudio.com/
 ```
 
@@ -57,7 +56,7 @@ http://qr.liantu.com/api.php?text=编码后的 URL
 4. 同样使用上述接口对部署后的 URL 生成二维码
 
 # References
-https://github.com/mengkunsoft/OneQRCode
-<br>
-https://segmentfault.com/a/1190000013301132
+1. https://github.com/mengkunsoft/OneQRCode
+
+2. https://segmentfault.com/a/1190000013301132
 
