@@ -24,8 +24,18 @@ Url: "HTTPS://QR.ALIPAY.COM/FKX09613RWE3ROTNTVR362", //支付宝收款码扫描�
 
 3. 部署到 Github Pages 或其他服务器
 
+> 当然页面的提示问题和标题都非常容易更改，打开 index.html 你就能看到
+
 # Tools
 可以使用以下工具得到项目所需的二维码和支付宝收款码链接
+
+0. 修改 index.html 建议使用 VS Code、Notepad++ 等高级文本编辑器
+
+```
+https://notepad-plus-plus.org/
+
+https://code.visualstudio.com/
+```
 
 1. 使用二维码扫描器将支付宝、微信和 QQ 收款码全部转成对应 URL
 
