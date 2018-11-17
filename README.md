@@ -40,7 +40,7 @@ http://tool.oschina.net/encode?type=4
 3. 使用以下接口将编码后的 URL 生成指定样式的新二维码
 
 ```
-http://qr.liantu.com/api.php?text=
+http://qr.liantu.com/api.php?text=编码后的 URL
 ```
 4. 同样使用上述接口对部署后的 URL 生成二维码
 
