@@ -34,8 +34,9 @@
             otherQr: staticImgPath + "qrcode/other.png",
             alipayUrl: "HTTPS://QR.ALIPAY.COM/FKX09613RWE3ROTNTVR362",
 
-            qqpayTitle: "QQ 钱包支付",
+            qqpayTitle: "QQ 钱包",
             wxpayTitle: "微信支付",
+            alipayTitle: "支付宝",
             otherTitle: "打赏作者",
             payText: "长按识别二维码，向 TA 付款",
             otherText: "请使用支付宝、微信或 QQ 扫码付款"
@@ -56,6 +57,7 @@
         var qrText = setting.otherText;
         if(ua.match(/Alipay/i)) {
             type = "alipay";
+            name = setting.alipayTitle;
             self.location = setting.alipayUrl;
         } else if(ua.match(/MicroMessenger\//i)) {
             type = "wepay";
