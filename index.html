@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link href="./static/img/icon/favicon.ico" rel="SHORTCUT ICON">
-    <script src='./static/js/jquery.min.js'></script>
     <style type="text/css">
         * {margin: auto;padding: 0;border: 0;}
         html {-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%}
@@ -70,14 +69,15 @@
             titleIcon = setting.qqIcon;
             qrImg = setting.qqpayQr;
         }
-        $("title").html(name);
-        $("body").addClass(type);
-        $("#titleIcon").attr("src", titleIcon);
-        $("#titleText").html(name);
-        $("#qrImg").attr("src", qrImg);
         if(type != "other") qrText = setting.payText;
-        $("#qrText").html(qrText);
-        if(type != "alipay")  $("body").removeAttr("hidden");
+        var body = document.body;
+        document.title = name;
+        document.getElementById("titleIcon").setAttribute("src", titleIcon);
+        document.getElementById("titleText").innerHTML = name;
+        document.getElementById("qrImg").setAttribute("src", qrImg);
+        document.getElementById("qrText").innerHTML = qrText;
+        body.setAttribute("class", type);
+        if(type != "alipay") body.removeAttribute("hidden");
     </script>
 </body>
 </html>
