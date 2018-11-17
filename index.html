@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link href="./static/img/icon/favicon.ico" rel="SHORTCUT ICON">
+    <script src='./static/js/jquery.min.js'></script>
+    <style type="text/css">
+        * {margin: auto;padding: 0;border: 0;}
+        html {-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%}
+        body {font-family: -apple-system, SF UI Text, Arial, Microsoft YaHei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;color: #333;}
+        img {max-width: 100%;}
+        h3 {padding: 10px;}
+        .container {text-align: center;}
+        .title {padding: 2em 0;background-color: #fff;}
+        .content {padding: 2em 1em;color: #fff;}
+        .wepay {background-color: #23ac38;}
+        .qq {background-color: #4c97d5;}
+        .other {background-color: #ff7055;}
+    </style>
+    <script>
+        var staticImgPath = "./static/img/";
+        var setting = {
+            ua: navigator.userAgent,
+            qqIcon: staticImgPath + "icon/qq.jpg",
+            wxIcon: staticImgPath + "icon/wx.jpg",
+            otherIcon: staticImgPath + "icon/other.jpg",
+
+            wxpayQr: staticImgPath + "qrcode/wxpay.png",
+            qqpayQr: staticImgPath + "qrcode/qqpay.png",
+            otherQr: staticImgPath + "qrcode/other.png",
+            alipayUrl: "HTTPS://QR.ALIPAY.COM/FKX09613RWE3ROTNTVR362",
+
+            qqpayTitle: "QQ 钱包支付",
+            wxpayTitle: "微信支付",
+            otherTitle: "打赏作者",
+            payText: "长按识别二维码，向 TA 付款",
+            otherText: "请使用支付宝、微信或 QQ 扫码付款"
+        };
+    </script>
+</head>
+<body hidden="hidden">
+    <div class="container">
+        <div class="title"><img id="titleIcon" width="48px" height="48px"><h1 id="titleText"></h1></div>
+        <div class="content"><img id="qrImg"><h3 id="qrText"></h3></div>
+    </div>
+    <script>
+        var ua = setting.ua;
+        var type = "other";
+        var name = setting.otherTitle;
+        var titleIcon = setting.otherIcon;
+        var qrImg = setting.otherQr;
+        var qrText = setting.otherText;
+        if(ua.match(/Alipay/i)) {
+            type = "alipay";
+            self.location = setting.alipayUrl;
+        } else if(ua.match(/MicroMessenger\//i)) {
+            type = "wepay";
+            name = setting.wxpayTitle;
+            titleIcon = setting.wxIcon;
+            qrImg = setting.wxpayQr;
+        } else if(navigator.userAgent.match(/QQ\//i)) {
+            type = "qq";
+            name = setting.qqpayTitle;
+            titleIcon = setting.qqIcon;
+            qrImg = setting.qqpayQr;
+        }
+        $("title").html(name);
+        $("body").addClass(type);
+        $("#titleIcon").attr("src", titleIcon);
+        $("#titleText").html(name);
+        $("#qrImg").attr("src", qrImg);
+        if(type != "other") qrText = setting.payText;
+        $("#qrText").html(qrText);
+        if(type != "alipay")  $("body").removeAttr("hidden");
+    </script>
+</body>
+</html>
