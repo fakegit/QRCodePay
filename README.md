@@ -57,6 +57,5 @@ http://qr.liantu.com/api.php?text=编码后的 URL
 
 # References
 1. https://github.com/mengkunsoft/OneQRCode
-
 2. https://segmentfault.com/a/1190000013301132
 
