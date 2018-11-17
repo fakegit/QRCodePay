@@ -15,7 +15,7 @@ https://vcheckzen.github.io/customized/pay/
 2. 替换以下 4 张图片和 index.html 文件 35 行的支付宝收款码对应的链接
 
 ```
-static/img/icon/favicon.ico //页面 TAB 上的小图标
+static/img/icon/favicon.webp //页面 TAB 上的小图标
 static/img/qrcode/wxpay.webp //微信收款码
 static/img/qrcode/qqpay.webp //QQ 钱包收款码
 static/img/qrcode/other.webp //该页面部署后 URL 对应的二维码
