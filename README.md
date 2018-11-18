@@ -18,7 +18,7 @@ https://vcheckzen.github.io/customized/pay/
 https://vcheckzen.github.io/customized/pay/  //访问该页面的 URL
 ```
 
-3. 通过以下网页上传付款码，填写 URL，生成 4 张 WEBP 图片
+3. 通过以下网页上传付款码和页面小标签 favicon 并填写部署 URL，以生成 4 张 WEBP 图片
 
 ```
 https://vcheckzen.github.io/customized/pay/requirements/
