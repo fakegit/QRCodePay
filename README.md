@@ -19,7 +19,7 @@ static/img/icon/favicon.webp //页面 TAB 上的小图标
 static/img/qrcode/wxpay.webp //微信收款码
 static/img/qrcode/qqpay.webp //QQ 钱包收款码
 static/img/qrcode/other.webp //该页面部署后 URL 对应的二维码
-Url: "HTTPS://QR.ALIPAY.COM/FKX09613RWE3ROTNTVR362", //支付宝收款码扫描后的链接
+"ali": "HTTPS://QR.ALIPAY.COM/FKX09613RWE3ROTNTVR362" //支付宝收款码扫描后的链接
 // 页面提示文字和标题也非常容易更改，打开 index.html 便可看到
 ```
 
