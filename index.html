@@ -44,7 +44,7 @@
 </head>
 <body hidden="hidden">
     <div class="container">
-       <div class="title" id="icon"></div>
+        <div class="title" id="icon"></div>
         <div class="content" id="qrcode"></div>
     </div>
     <script>
@@ -77,32 +77,28 @@
         iconText.innerHTML = title;
 
         var icon = new Image();
-        icon.onload = function() { imgLoaded("icon", icon, iconText); }
+        icon.onload = function() { imageLoaded("icon", icon, iconText); }
         icon.src = iconUrl;
         icon.width = 70;
-        icon.height = icon.width;
+        icon.height = icon.width;        
 
         var qrcodeText = document.createElement("h3");
         qrcodeText.innerHTML = payText;
 
         var qrcode = new Image();
-        qrcode.onload = function() { imgLoaded("qrcode", qrcode, qrcodeText); }
+        qrcode.onload = function() { imageLoaded("qrcode", qrcode, qrcodeText); }
         qrcode.src = qrcodeUrl;
-
+        
         var body = document.body;
         body.setAttribute("class", type);
-
-        function show() {
-            if(type != "alipay" && icon.complete && qrcode.complete) { 
-                body.removeAttribute("hidden"); 
-            }
-        }
         
-        function imgLoaded(elemmentId, pic, text) {
+        function imageLoaded(elemmentId, pic, text) {
             var elem = document.getElementById(elemmentId);
             elem.appendChild(pic);
             elem.appendChild(text);
-            show();
+            if(type != "alipay" && icon.complete && qrcode.complete) { 
+                body.removeAttribute("hidden"); 
+            }
         }
     </script>
 </body>
