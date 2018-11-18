@@ -12,7 +12,11 @@ https://vcheckzen.github.io/customized/pay/
 # HOW
 1. 下载整个项目并解压
 
-2. 从手机分别导出支付宝、微信和 QQ 收款码，并确定部署 URL
+2. 从手机分别导出支付宝、微信和 QQ 收款码，并确定部署 URL，例如我的部署 URL 是:
+
+```
+https://vcheckzen.github.io/customized/pay/  //访问该页面的 URL
+```
 
 3. 通过以下网页上传付款码，填写 URL，生成 4 张 WEBP 图片
 
