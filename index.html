@@ -75,7 +75,6 @@
 
         var iconText = document.createElement("h1");
         iconText.innerHTML = title;
-
         var icon = new Image();
         icon.onload = function() { imageLoaded("icon", icon, iconText); }
         icon.src = iconUrl;
@@ -84,19 +83,17 @@
 
         var qrcodeText = document.createElement("h3");
         qrcodeText.innerHTML = payText;
-
         var qrcode = new Image();
         qrcode.onload = function() { imageLoaded("qrcode", qrcode, qrcodeText); }
         qrcode.src = qrcodeUrl;
-        
-        var body = document.body;
-        body.setAttribute("class", type);
         
         function imageLoaded(elemmentId, pic, text) {
             var elem = document.getElementById(elemmentId);
             elem.appendChild(pic);
             elem.appendChild(text);
             if(type != "alipay" && icon.complete && qrcode.complete) { 
+                var body = document.body;
+                body.setAttribute("class", type);
                 body.removeAttribute("hidden"); 
             }
         }
