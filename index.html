@@ -62,7 +62,7 @@
             var parent = document.getElementById(parentId);
             parent.appendChild(child1);
             parent.appendChild(child2);
-            if(setting.type != "alipay" && setting.imageLoadedCount == 2) { 
+            if(setting.imageLoadedCount == 2 && setting.type != "alipay") { 
                 var body = document.body;
                 body.setAttribute("class", setting.type);
                 body.removeAttribute("hidden"); 
