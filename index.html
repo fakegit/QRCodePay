@@ -23,31 +23,48 @@
     <script>
         var staticImgPath = "./static/img/";
         var setting = {
-            imageLoaded: 0,
+            optionalIcon: { 
+                "wx": staticImgPath + "icon/wx.webp", 
+                "qq": staticImgPath + "icon/qq.webp", 
+                "oth": staticImgPath + "icon/other.webp" 
+            },
+            optionalQrcodeOrUrl: {
+                "wx": staticImgPath + "qrcode/wxpay.webp",
+                "qq": staticImgPath + "qrcode/qqpay.webp",
+                "oth": staticImgPath + "qrcode/other.webp",
+                "ali": "HTTPS://QR.ALIPAY.COM/FKX09613RWE3ROTNTVR362"
+            },
+            optionalType: { 
+                "ali": "alipay", 
+                "wx" :"wepay",
+                "qq": "qq",
+                "oth": "other"
+            },
+            optionalTitle: { 
+                "ali": "支付宝", 
+                "wx" :"微信支付",
+                "qq": "QQ钱包",
+                "oth": "打赏作者",
+            },
+            optionalHint: {
+                "pay": "长按识别二维码，向 TA 付款",
+                "oth": "请使用支付宝、微信或 QQ 扫码付款"
+            },
             ua: navigator.userAgent,
-            qqIcon: staticImgPath + "icon/qq.webp",
-            wxIcon: staticImgPath + "icon/wx.webp",
-            otherIcon: staticImgPath + "icon/other.webp",
-
-            wxpayQrcode: staticImgPath + "qrcode/wxpay.webp",
-            qqpayQrcode: staticImgPath + "qrcode/qqpay.webp",
-            otherQrcode: staticImgPath + "qrcode/other.webp",
-            alipayUrl: "HTTPS://QR.ALIPAY.COM/FKX09613RWE3ROTNTVR362",
-
-            qqpayTitle: "QQ钱包",
-            wxpayTitle: "微信支付",
-            alipayTitle: "支付宝",
-            otherTitle: "打赏作者",
-            payText: "长按识别二维码，向 TA 付款",
-            otherText: "请使用支付宝、微信或 QQ 扫码付款"
+            imageLoadedCount: 0,
+            type: "",
+            title: "",
+            icon: "",
+            qrcode: "",
+            hint: "",
         };
-        function imageLoaded(parentId, img, h) {
+        function imageLoaded(parentId, child1, child2) {
             var parent = document.getElementById(parentId);
-            parent.appendChild(img);
-            parent.appendChild(h);
-            if(type != "alipay" && setting.imageLoaded == 2) { 
+            parent.appendChild(child1);
+            parent.appendChild(child2);
+            if(setting.type != "alipay" && setting.imageLoadedCount == 2) { 
                 var body = document.body;
-                body.setAttribute("class", type);
+                body.setAttribute("class", setting.type);
                 body.removeAttribute("hidden"); 
             }
         }
@@ -55,7 +72,7 @@
             var h = document.createElement(hType);
             h.innerHTML = html;
             var img = new Image();
-            img.onload = function() { setting.imageLoaded++; imageLoaded(parentId, img, h); };
+            img.onload = function() { setting.imageLoadedCount++; imageLoaded(parentId, img, h); };
             img.src = imgSrc;
             if(hasWidth) {
                 img.width = imgWidth;
@@ -71,32 +88,27 @@
     </div>
     <script>
         var ua = setting.ua;
-        var type = "other";
-        var title = setting.otherTitle;
-        var iconUrl = setting.otherIcon;
-        var qrcodeUrl = setting.otherQrcode;
-        var payText = setting.otherText;
-
+        var key = "oth";
+        var hintKey = "pay";
         if(ua.match(/Alipay/i)) {
-            type = "alipay";
-            title = setting.alipayTitle;
-            self.location = setting.alipayUrl;
+            key = "ali";
+            self.location = setting.optionalQrcodeOrUrl[key];
         } else if(ua.match(/MicroMessenger\//i)) {
-            type = "wepay";
-            title = setting.wxpayTitle;
-            iconUrl = setting.wxIcon;
-            qrcodeUrl = setting.wxpayQrcode;
-        } else if(ua.match(/QQ\//i)) {
-            type = "qq";
-            title = setting.qqpayTitle;
-            iconUrl = setting.qqIcon;
-            qrcodeUrl = setting.qqpayQrcode;
+            key = "wx";
+        } else if(ua.match(/QQ\//i)){
+            key = "qq";
+        } else {
+            hintKey = "oth";
         }
-        document.title = title;
-        if(type != "other") payText = setting.payText;      
-        
-        createHAndImage("h1", title, iconUrl, true, 50, "icon");
-        createHAndImage("h3", payText, qrcodeUrl, false, 0, "qrcode");
+        setting.type = setting.optionalType[key];
+        setting.title = setting.optionalTitle[key];
+        setting.icon = setting.optionalIcon[key];
+        setting.qrcode = setting.optionalQrcodeOrUrl[key];
+        setting.hint = setting.optionalHint[hintKey];
+
+        document.title = setting.title;
+        createHAndImage("h1", setting.title, setting.icon, true, 50, "icon");
+        createHAndImage("h3", setting.hint, setting.qrcode, false, 0, "qrcode");
     </script>
 </body>
 </html>
