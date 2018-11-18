@@ -12,13 +12,15 @@ https://vcheckzen.github.io/customized/pay/
 # HOW
 1. 下载整个项目并解压
 
-2. 通过以下网页生成 4 张图片
+2. 从手机分别导出支付宝、微信和 QQ 收款码，并确定部署的 URL
+
+3. 通过以下网页上传付款码，填写 URL，生成 4 张 WEBP 图片
 
 ```
 https://vcheckzen.github.io/customized/pay/requirements/
 ```
 
-3. 将生成的 4 张图片覆盖以下目录中的同名文件
+4. 用生成的 4 张图片覆盖以下目录中的同名文件
 
 ```
 static/img/icon/favicon.webp //页面 TAB 上的小图标
@@ -27,13 +29,13 @@ static/img/qrcode/qqpay.webp //QQ 钱包收款码
 static/img/qrcode/other.webp //该页面部署后 URL 对应的二维码
 ```
 
-2. 复制生成的支付宝付款码链接，粘贴到 index.html 文件 35 行对应位置
+5. 复制生成的支付宝付款码链接，粘贴到 index.html 文件 35 行对应位置
 
 ```
-"ali": "HTTPS://QR.ALIPAY.COM/FKX09613RWE3ROTNTVR362" //支付宝收款码扫描后的链接
+"ali": "HTTPS://QR.ALIPAY.COM/FKX09613RWE3ROTNTVR362" //支付宝收款码链接
 ```
 
-3. 部署到 Github Pages 或其他服务器
+6. 部署到 Github Pages 或其他服务器
 
 # REFERENCES
 1. https://github.com/mengkunsoft/OneQRCode
