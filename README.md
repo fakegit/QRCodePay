@@ -12,60 +12,28 @@ https://vcheckzen.github.io/customized/pay/
 # HOW
 1. 下载整个项目并解压
 
-2. 替换以下 4 张图片和 index.html 文件 35 行的支付宝收款码对应的链接
+2. 通过以下网页生成 4 张图片
+
+```
+https://vcheckzen.github.io/customized/pay/requirements/
+```
+
+3. 将生成的 4 张图片覆盖以下目录中的同名文件
 
 ```
 static/img/icon/favicon.webp //页面 TAB 上的小图标
 static/img/qrcode/wxpay.webp //微信收款码
 static/img/qrcode/qqpay.webp //QQ 钱包收款码
 static/img/qrcode/other.webp //该页面部署后 URL 对应的二维码
+```
+
+2. 复制生成的支付宝付款码链接，粘贴到 index.html 文件 35 行对应位置
+
+```
 "ali": "HTTPS://QR.ALIPAY.COM/FKX09613RWE3ROTNTVR362" //支付宝收款码扫描后的链接
-// 页面提示文字和标题也非常容易更改，打开 index.html 便可看到
 ```
 
 3. 部署到 Github Pages 或其他服务器
-
-# TOOLS
-可以使用以下工具得到项目所需的二维码和支付宝收款码链接
-
-0. 修改 index.html 建议使用 VS Code、Notepad++ 等高级文本编辑器
-
-```
-https://notepad-plus-plus.org/
-https://code.visualstudio.com/
-```
-
-1. 使用二维码扫描器将支付宝、微信和 QQ 收款码全部转成对应 URL
-
-```
-https://cli.im/deqr
-```
-
-2. 使用以下工具将微信和 QQ 收款码对应的 URL 编码
-
-```
-http://tool.oschina.net/encode?type=4
-```
-
-3. 使用以下接口将编码后的 URL 生成指定样式的新二维码
-
-```
-http://qr.liantu.com/api.php?text=编码后的 URL
-```
-4. 同样使用上述接口对部署后的 URL 生成二维码
-
-5. 使用以下工具将图片转换为 WEBP 格式，缩小体积
-
-```
-https://www.aconvert.com/cn/image/png-to-webp/
-```
-
-6. ~~还可将一定会加载的图转换成 BASE64~~（favicon.ico 不影响页面渲染，另外两张需要判断后加载），并将 HTML 压缩
-
-```
-http://riny.net/lab/tools/img2base64.html
-https://www.sojson.com/jshtml.html
-```
 
 # REFERENCES
 1. https://github.com/mengkunsoft/OneQRCode
