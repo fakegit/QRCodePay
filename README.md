@@ -60,7 +60,7 @@ http://qr.liantu.com/api.php?text=编码后的 URL
 https://www.aconvert.com/cn/image/png-to-webp/
 ```
 
-6. ~~还可将一定会加载的图转换成 BASE64~~（没有一定会加载的图，favicon.ico 最后才加载），并将 HTML 压缩
+6. ~~还可将一定会加载的图转换成 BASE64~~（favicon.ico 不影响页面渲染，另外两张需要判断后加载），并将 HTML 压缩
 
 ```
 http://riny.net/lab/tools/img2base64.html
