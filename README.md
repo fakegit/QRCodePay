@@ -14,8 +14,8 @@ ONE qrcode for alipay、wxpay and qqpay, which can be pushed on github pages.
 1. 下载整个项目并解压
 - https://github.com/vcheckzen/QRCodePay/releases/download/1.0/pay.zip
 
-2. 从手机分别导出支付宝、微信和 QQ 收款码，并确定部署 URL，例如我的部署 URL 是:
-- https://vcheckzen.github.io/customized/pay/  //访问该页面的 URL
+2. 从手机分别导出支付宝、微信和 QQ 收款码，并确定部署 URL，例如
+- https://vcheckzen.github.io/customized/pay/
 
 3. 通过以下网页上传付款码和页面小标签 favicon 并填写部署 URL，以生成 4 张 WEBP 图片
 - https://vcheckzen.github.io/customized/pay/requirements/
