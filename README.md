@@ -2,8 +2,8 @@
 ONE qrcode for alipay、wxpay and qqpay, which can be pushed on github pages.
 
 # DEMO
-https://vcheckzen.github.io/customized/pay/
-https://vcheckzen.github.io/customized/pay/requirements/
+- https://vcheckzen.github.io/customized/pay/
+- https://vcheckzen.github.io/customized/pay/requirements/
 
 # WHY
 声明：该项目思路并非原创，只是发现诸多类似项目中要么是 PHP 版本，需要服务器支持，要么因个人喜好原因，对界面不太满意，在此声明并非觉得他们好或不好。另一个问题是他们都依赖接口和外链。所以我参考两个项目，取其中一个的样式，另一个的跳转，并去除所有接口和外链，改为部署前手动生成，将页面静态化，无依赖，在此十分感谢两位作者
@@ -12,22 +12,13 @@ https://vcheckzen.github.io/customized/pay/requirements/
 
 # HOW
 1. 下载整个项目并解压
-
-```
-https://github.com/vcheckzen/QRCodePay/releases/download/1.0/pay.zip
-```
+- https://github.com/vcheckzen/QRCodePay/releases/download/1.0/pay.zip
 
 2. 从手机分别导出支付宝、微信和 QQ 收款码，并确定部署 URL，例如我的部署 URL 是:
-
-```
-https://vcheckzen.github.io/customized/pay/  //访问该页面的 URL
-```
+- https://vcheckzen.github.io/customized/pay/  //访问该页面的 URL
 
 3. 通过以下网页上传付款码和页面小标签 favicon 并填写部署 URL，以生成 4 张 WEBP 图片
-
-```
-https://vcheckzen.github.io/customized/pay/requirements/
-```
+- https://vcheckzen.github.io/customized/pay/requirements/
 
 4. 用生成的 4 张图片覆盖以下目录中的同名文件
 
@@ -47,6 +38,6 @@ static/img/qrcode/other.webp //该页面部署后 URL 对应的二维码
 6. 部署到 Github Pages 或其他服务器
 
 # REFERENCES
-1. https://github.com/mengkunsoft/OneQRCode
-2. https://segmentfault.com/a/1190000013301132
+- https://github.com/mengkunsoft/OneQRCode
+- https://segmentfault.com/a/1190000013301132
 
