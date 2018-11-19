@@ -15,6 +15,7 @@ ONE qrcode for alipay、wxpay and qqpay, which can be pushed on github pages.
 WEBP 兼容性检测代码：
 
 ```
+// F12 控制台粘贴回车
 window.isSupportWebp = false;
 void function(){
     var webpTestsUri = 'data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=';
@@ -26,7 +27,7 @@ void function(){
     image.onload = addResult;
     image.src = webpTestsUri;
 }();
-console.log(window.isSupportWebp);
+setTimeout(function (){console.log(window.isSupportWebp);}, 1000);
 ```
 
 # HOW
