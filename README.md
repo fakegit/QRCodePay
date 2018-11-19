@@ -2,7 +2,7 @@
 ONE qrcode for alipay、wxpay and qqpay, which can be pushed on github pages.
 
 # DEMO
-<a href="链接" target="_blank">文本</a>
+<a href="baidu.com" target="_blank">文本</a>
 
 - <https://vcheckzen.github.io/customized/pay/>{:target="_blank"}
 - <https://vcheckzen.github.io/customized/pay/requirements/>{:target="_blank"}
