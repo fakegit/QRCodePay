@@ -12,6 +12,10 @@ https://vcheckzen.github.io/customized/pay/
 # HOW
 1. 下载整个项目并解压
 
+```
+https://github.com/vcheckzen/QRCodePay/releases/download/1.0/pay.zip
+```
+
 2. 从手机分别导出支付宝、微信和 QQ 收款码，并确定部署 URL，例如我的部署 URL 是:
 
 ```
