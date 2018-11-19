@@ -10,7 +10,7 @@ ONE qrcode for alipay、wxpay and qqpay, which can be pushed on github pages.
 
 注意：经测，部署在 coding pages，跳转时会被官方拦截，提示滥用；若域名未备案或网址带有端口号会被微信拦截，需手动确定；github pages 无以上问题，但国内速度较慢，虽然多数情况下可在 2s 内加载，但仍建议部署在国内已备案的服务器上
 
-兼容性：因为使用了 webp 格式素材，PC 端仅 Chrome 完美兼容，但考虑到国产浏览器大多为 Chromium 内核，并且国内移动端大都跟进了 webp，所以并不打算更换素材，实测微信、QQ、支付宝都是完美兼容的。若想获得更换的兼容性，请自行更换 png、jpg 等格式素材
+兼容性：因为使用了 webp 格式素材，PC 端仅 Chrome 完美兼容，但考虑到国产浏览器大多为 Chromium 内核，并且国内移动端大都跟进了 webp，所以并不打算更换素材，实测微信、QQ、支付宝都是完美兼容的。若想获得更好的兼容性，请自行更换 png、jpg 等格式素材
 
 WEBP 兼容性检测代码：
 
